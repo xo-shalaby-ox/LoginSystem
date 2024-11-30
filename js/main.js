@@ -105,7 +105,6 @@ function validationInputs(el) {
       inputSignupPass: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&&_+\-]).{8,}$/,
    }
    var errorMessage = document.getElementById(`msg-${el.id}`);
-   console.log(el.id);
 
    if (regexObj[el.id].test(el.value)) {
          el.classList.add("is-valid");
@@ -156,7 +155,7 @@ function logIn() {
          }
       }
       if (found) {
-         window.location = "../home.html";
+         window.location = "/home.html";
       } else {
          popUpLogin.classList.remove("d-none");
          popUpLogin.classList.add("d-flex");
