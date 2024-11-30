@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- BootStrap File -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shop</title>
+  </head>
+  <body>
+    <div class="position-relative login-system">
+      <div
+        id="popup"
+        class="popup position-fixed d-none justify-content-center align-items-center"
+      >
+        <div
+          class="popup-content position-relative text-center d-flex flex-column row-gap-2 bg-body"
+        >
+          <header
+            class="header d-flex justify-content-between align-items-center"
+          >
+            <div
+              class="list-circle d-flex justify-content-start align-items-center column-gap-2"
+            >
+              <span class="opacity-75"></span>
+              <span class="opacity-75"></span>
+              <span class="opacity-75"></span>
+            </div>
+            <div class="close-icon">
+              <i id="close-icon" class="fa-solid fa-xmark"></i>
+            </div>
+          </header>
+          <div
+            class="content d-flex justify-content-center align-items-center p-4 rounded-4"
+          >
+            <h3 class="text-capitalize fs-4">
+              this account is already exist
+              <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                <circle
+                  class="pl__ring pl__ring--a"
+                  cx="120"
+                  cy="120"
+                  r="105"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 660"
+                  stroke-dashoffset="-330"
+                  stroke-linecap="round"
+                ></circle>
+                <circle
+                  class="pl__ring pl__ring--b"
+                  cx="120"
+                  cy="120"
+                  r="35"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 220"
+                  stroke-dashoffset="-110"
+                  stroke-linecap="round"
+                ></circle>
+                <circle
+                  class="pl__ring pl__ring--c"
+                  cx="85"
+                  cy="120"
+                  r="70"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 440"
+                  stroke-linecap="round"
+                ></circle>
+                <circle
+                  class="pl__ring pl__ring--d"
+                  cx="155"
+                  cy="120"
+                  r="70"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 440"
+                  stroke-linecap="round"
+                ></circle>
+              </svg>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div
+        id="popupLogin"
+        class="popup position-fixed d-none justify-content-center align-items-center"
+      >
+        <div
+          class="popup-content position-relative text-center d-flex flex-column row-gap-2 bg-body"
+        >
+          <header
+            class="header d-flex justify-content-between align-items-center"
+          >
+            <div
+              class="list-circle d-flex justify-content-start align-items-center column-gap-2"
+            >
+              <span class="opacity-75"></span>
+              <span class="opacity-75"></span>
+              <span class="opacity-75"></span>
+            </div>
+            <div class="close-icon">
+              <i id="close-iconLogin" class="fa-solid fa-xmark"></i>
+            </div>
+          </header>
+          <div
+            class="content d-flex justify-content-center align-items-center p-4 rounded-4"
+          >
+            <h3 class="text-capitalize fs-4">
+              Incorrect Email or Password
+              <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                <circle
+                  class="pl__ring pl__ring--a"
+                  cx="120"
+                  cy="120"
+                  r="105"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 660"
+                  stroke-dashoffset="-330"
+                  stroke-linecap="round"
+                ></circle>
+                <circle
+                  class="pl__ring pl__ring--b"
+                  cx="120"
+                  cy="120"
+                  r="35"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 220"
+                  stroke-dashoffset="-110"
+                  stroke-linecap="round"
+                ></circle>
+                <circle
+                  class="pl__ring pl__ring--c"
+                  cx="85"
+                  cy="120"
+                  r="70"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 440"
+                  stroke-linecap="round"
+                ></circle>
+                <circle
+                  class="pl__ring pl__ring--d"
+                  cx="155"
+                  cy="120"
+                  r="70"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                  stroke-dasharray="0 440"
+                  stroke-linecap="round"
+                ></circle>
+              </svg>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="container my-5">
+        <div class="row gy-4 gx-0">
+          <div class="col-md-6 d-flex justify-content-center">
+            <div
+              class="login-data position-relative shadow-lg d-flex flex-column row-gap-5 py-5 w-100"
+            >
+              <h2 class="text-center">Create Your Account</h2>
+              <form
+                class="d-flex flex-column justify-content-between align-items-batween row-gap-3 p-5"
+              >
+                <div
+                  class="inp-name position-relative d-flex flex-column row-gap-2"
+                >
+                  <label
+                    for="input-signup-name"
+                    class="d-flex justify-content-start align-items-center column-gap-2 fw-bold"
+                  >
+                    <i class="fa-solid fa-user fa-bounce"></i>
+                    <span>Your Name</span>
+                  </label>
+                  <input
+                    id="inputSignupName"
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    onkeyup="validationInputs(this)"
+                  />
+                  <ul
+                    id="msg-inputSignupName"
+                    class="list-items d-none list-unstyled position-absolute p-3 alert alert-danger rounded-2"
+                  >
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic"
+                        >Must Start With Capital Char.</span
+                      >
+                    </li>
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic">Zero or More Small Char.</span>
+                    </li>
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic">Zero or More Numbers.</span>
+                    </li>
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic">Must Not Enter Signs.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="inputemail position-relative d-flex flex-column row-gap-2"
+                >
+                  <label
+                    for="input-signup-Email"
+                    class="d-flex justify-content-start align-items-center column-gap-2 fw-bold"
+                  >
+                    <i class="fa-solid fa-envelope fa-bounce"></i>
+                    <span>E-mail Address</span>
+                  </label>
+                  <input
+                    id="inputSignupEmail"
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="Enter Your Email"
+                    onkeyup="validationInputs(this)"
+                  />
+                  <p
+                    id="msg-inputSignupEmail"
+                    class="d-none msg-inputSignupEmail alert alert-danger position-absolute"
+                  >
+                    Email Should Be Like This "example@gamil.com" ..!
+                  </p>
+                </div>
+                <div
+                  class="inputpass position-relative d-flex flex-column row-gap-2"
+                >
+                  <label
+                    for="inputSignupPass"
+                    class="d-flex justify-content-start align-items-center column-gap-2 fw-bold"
+                  >
+                    <i class="fa-solid fa-lock fa-bounce"></i>
+                    <span>Password</span>
+                  </label>
+                  <input
+                    id="inputSignupPass"
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    placeholder="Enter Your password"
+                    onkeyup="validationInputs(this)"
+                  />
+                  <i
+                    id="eyeIcon"
+                    onclick="showPass()"
+                    class="position-absolute fa-solid fa-eye eyeIcon"
+                  ></i>
+                  <ul
+                    id="msg-inputSignupPass"
+                    class="list-itemsPass d-none list-unstyled position-absolute p-3 alert alert-danger rounded-2"
+                  >
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic"
+                        >Must Start With Capital Char.</span
+                      >
+                    </li>
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic">Must Contain Small Char.</span>
+                    </li>
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic">Must Contain Numbers.</span>
+                    </li>
+                    <li
+                      class="item mb-1 d-flex justify-content-start align-items-center column-gap-2"
+                    >
+                      <i class="fa-solid fa-check-double check-icon"></i>
+                      <span class="fst-italic">Must Contain Signs.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="form-btn d-flex flex-column justify-content-center align-items-center row-gap-4"
+                >
+                  <button type="button" onclick="signUpData()" class="btn">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+              <div
+                id="signup-caption"
+                class="signup-caption position-absolute d-flex flex-column justify-content-between align-items-center text-center py-5"
+              >
+                <h3>Welcome to</h3>
+                <div class="caption-logo">
+                  <img src="./images/Page Logo.png" class="w-25" alt="logo" />
+                  <h1 class="mt-3">Trenders</h1>
+                </div>
+                <p class="fst-italic">
+                  At Trenders, we believe that style is for everyone. We offer a
+                  diverse range of high-quality products that cater to modern
+                  tastes and trends. Whether you're shopping for sleek and
+                  comfortable t-shirts, trendy bags, or the latest in men's and
+                  women's clothing, we have something to suit every lifestyle.
+                  Our collection is designed to help you look and feel your
+                  best.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <div
+              class="position-relative signup-data shadow-lg d-flex flex-column row-gap-5 py-5 w-100"
+            >
+              <h2 class="text-center">Login With Your Account</h2>
+              <form
+                class="d-flex flex-column justify-content-between align-items-batween row-gap-5 p-5"
+              >
+                <div
+                  class="inputemail position-relative d-flex flex-column row-gap-2"
+                >
+                  <label
+                    for="inputLoginEmail"
+                    class="d-flex justify-content-start align-items-center column-gap-2 fw-bold"
+                  >
+                    <i class="fa-solid fa-envelope fa-bounce"></i>
+                    <span>E-mail Address</span>
+                  </label>
+                  <input
+                    id="inputLoginEmail"
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="Enter Your Email"
+                  />
+                  <p
+                    id="msgEmail"
+                    class="alert alert-danger d-none position-absolute"
+                  >
+                    This Field Is Required
+                  </p>
+                </div>
+                <div
+                  class="inputpass position-relative d-flex flex-column row-gap-2"
+                >
+                  <label
+                    for="inputLoginPass"
+                    class="d-flex justify-content-start align-items-center column-gap-2 fw-bold"
+                  >
+                    <i class="fa-solid fa-lock fa-bounce"></i>
+                    <span>Password</span>
+                  </label>
+                  <input
+                    id="inputLoginPass"
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    placeholder="Enter Your password"
+                  />
+                  <p
+                    id="msgPass"
+                    class="alert alert-danger d-none position-absolute"
+                  >
+                    This Field Is Required
+                  </p>
+                  <i
+                    id="eyeIconLogin"
+                    onclick="showPassLogin()"
+                    class="position-absolute fa-solid fa-eye eyeIconLogin"
+                  ></i>
+                </div>
+                <div
+                  class="form-btn d-flex flex-column justify-content-center align-items-center row-gap-4"
+                >
+                  <button onclick="logIn()" type="button" class="btn">
+                    Login
+                  </button>
+                  <span
+                    >Don't have an account ?..
+                    <span onclick="signUp()" class="btn-signup fs-5 fw-bold"
+                      >Sign Up</span
+                    ></span
+                  >
+                </div>
+              </form>
+              <div id="waves" class="position-absolute waves">
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

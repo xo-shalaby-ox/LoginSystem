@@ -1,0 +1,81 @@
+:root{
+    --main-color: #fff9;
+    --sec-color: #7d4f0a;
+}
+.container{
+    height: 100vh;
+}
+.content{
+    background-color: rgba(255, 255, 255, 0.329);
+}
+.content p span{
+    color: var(--sec-color);
+    font-weight: 900;
+    font-size: 20px;
+}
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+.icon {
+    font-size: 16px;
+    transition-duration: .3s;
+    color: #fff;
+}
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(196, 160, 2);
+    align-items: center;
+}
+.button:hover .icon {
+    font-size: 15px;
+    transition-duration: .3s;
+    transform: translateY(90%);
+}
+.button::before {
+    position: absolute;
+    top: -20px;
+    content: "Log Out";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+body {
+    margin: 0;
+    height: 100vh; 
+    background: linear-gradient(90deg, #d6960a, #a56300);
+    background-size: 200% 100%;  
+    animation: gradientMove 2s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 0 0; 
+    }
+    100% {
+        background-position: 100% 0; 
+    }
+}
