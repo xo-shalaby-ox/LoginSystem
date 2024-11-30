@@ -155,7 +155,7 @@ function logIn() {
          }
       }
       if (found) {
-         window.location.href ="../home.html";
+         window.location.href ="home.html";
       } else {
          popUpLogin.classList.remove("d-none");
          popUpLogin.classList.add("d-flex");

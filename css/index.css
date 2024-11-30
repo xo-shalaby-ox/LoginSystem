@@ -450,3 +450,12 @@ i {
     stroke-dashoffset: -440;
   }
 }
+
+/* @media screen and ( max-width : 992px){
+  .waves{
+    display: none;
+  }
+  .signup-caption{
+    border-radius: 12px;
+  }
+} */
