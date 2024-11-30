@@ -9,5 +9,5 @@ window.onload = function() {
     }
 }
 function logOut(){
-    window.location = "../index.html"
+    window.location.href = "../index.html"
 }
